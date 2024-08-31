@@ -10,7 +10,7 @@ public class MycheckedException {
         emails.add("user@domain.net");
 
         try {
-            removeInvalidEmails(emails);
+            IfInvalidEmails(emails);
         } catch (CustomEmailFormatException e) {
             System.err.println("Error during email validation: " + e.getMessage());
         }
@@ -21,7 +21,7 @@ public class MycheckedException {
         }
     }
 
-    public static void removeInvalidEmails(List<String> emails) throws CustomEmailFormatException {
+    public static void IfInvalidEmails(List<String> emails) throws CustomEmailFormatException {
         for (int i = emails.size() - 1; i >= 0; i--) {
             String email = emails.get(i);
             if (!isValidEmailFormat(email)) {
