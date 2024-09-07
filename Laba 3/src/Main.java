@@ -19,10 +19,10 @@ public class Main {
 
         List<String> words = Arrays.asList("apple", "banana", "orange", "apple", "banana");
         Set<String> uniqueWords = Uniqueobj.findUnique(words);
-        System.out.println("Унікальні слова: " + uniqueWords);
+        System.out.println("Unique words: " + uniqueWords);
 
         Map<String, Integer> wordCounts = Uniqueobj.countUnique(words);
-        System.out.println("Кількість входжень кожного слова: " + wordCounts);
+        System.out.println("Number of times each word appears: " + wordCounts);
     }
 
 }
