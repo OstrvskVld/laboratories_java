@@ -4,9 +4,9 @@ public class Main {
         System.out.println("Hello and welcome!");
         long y =  922337203685477580L;
         System.out.println("long nubmer is: " + y);
-//        ifel();
-//        swtch();
-//        whl();
+        ifel();
+        swtch();
+        whl();
         fr();
     }
     public static void  ifel() {
