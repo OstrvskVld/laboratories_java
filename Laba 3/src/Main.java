@@ -1,12 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
+        Students students = new Students();
+        students.addStudent(new Student(1,"John","123456789"));
+        students.addStudent(new Student(2,"David","987654321"));
+        students.printAllStudents();
+        Student foundstudent = students.findStudent(1);
+        if(foundstudent != null){
+            System.out.println("Student found: " + foundstudent);
         }
+        students.removeStudent(1);
+        students.printAllStudents();
     }
+
 }
