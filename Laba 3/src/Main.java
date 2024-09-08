@@ -53,11 +53,18 @@ public class Main {
 //        Box.deletelist(characterList,'b');
 //        System.out.println(characterList);
 
-        Find find = new Find();
-        System.out.println(find.findMax(5, 10));
-        System.out.println(find.findMax("apple", "banana"));
-        System.out.println(find.findMax(3.14, 2.71));
-        System.out.println(find.findMax('A', 'Z'));
+//        Find find = new Find();
+//        System.out.println(find.findMax(5, 10));
+//        System.out.println(find.findMax("apple", "banana"));
+//        System.out.println(find.findMax(3.14, 2.71));
+//        System.out.println(find.findMax('A', 'Z'));
+
+        Pair<Integer,String> pair1 = new Pair<>(10,"Ten");
+        System.out.println("Pair1: " +pair1);
+        Pair<String, List<Integer>> pair2 = new Pair<>("Hello", Arrays.asList(1,2,3));
+        System.out.println("Pair2: " +pair2);
+        System.out.println("Pair1 equals Pair2: " +pair1.equals(pair2));
+
     }
 
 }
