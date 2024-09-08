@@ -1,9 +1,8 @@
 import java.util.List;
 
 public class Box <T>{
-    public static <T> List<T> addtoList(List<T> list, T element, T anotherElement){
+    public static <T> List<T> addtoList(List<T> list, T element){
         list.add(element);
-        list.add(anotherElement);
         return list;
     }
     public static <T> List<T> deletelist(List<T> list, T elementdel){

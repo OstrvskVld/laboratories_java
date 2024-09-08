@@ -21,28 +21,28 @@ public class Main {
 //        Map<String, Integer> wordCounts = Uniqueobj.countUnique(words);
 //        System.out.println("Number of times each word appears: " + wordCounts);
 
-//        List<Integer> integerList = new ArrayList<>();
-//        integerList.add(1);
-//        integerList.add(2);
-//        integerList.add(3);
-//        integerList.add(4);
-//        integerList.add(5);
-//        Box.deletelist(integerList,3);
-//        System.out.println(integerList);
-//        List<String> stringList = new ArrayList<>();
-//        stringList.add("Hello");
-//        stringList.add("I`m");
-//        stringList.add("from");
-//        stringList.add("Russia");
-//        stringList.add("Ukraine");
-//        Box.deletelist(stringList,"Russia");
-//        System.out.println(stringList);
-//        List<Character> characterList = new ArrayList<>();
-//        characterList.add('a');
-//        characterList.add('b');
-//        characterList.add('c');
-//        Box.deletelist(characterList,'b');
-//        System.out.println(characterList);
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(1);
+        integerList.add(2);
+        integerList.add(3);
+        integerList.add(4);
+        integerList.add(5);
+        Box.deletelist(integerList,3);
+        System.out.println(integerList);
+        List<String> stringList = new ArrayList<>();
+        stringList.add("Hello");
+        stringList.add("I`m");
+        stringList.add("from");
+        stringList.add("Russia");
+        stringList.add("Ukraine");
+        Box.deletelist(stringList,"Russia");
+        System.out.println(stringList);
+        List<Character> characterList = new ArrayList<>();
+        characterList.add('a');
+        characterList.add('b');
+        characterList.add('c');
+        Box.deletelist(characterList,'b');
+        System.out.println(characterList);
     }
 
 }
