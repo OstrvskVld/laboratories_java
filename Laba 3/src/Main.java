@@ -2,6 +2,12 @@ import java.util.*;
 
 public class Main {
 
+    public static void  addToList (List<? super Integer> list){
+        for (Object o : list){
+            System.out.println(o);
+        }
+    }
+
     public static double getArea(List<? extends Shape> shapes){
         double area = 0;
         for (Shape shape : shapes){
@@ -19,6 +25,24 @@ public class Main {
 //        }
 //    }
     public static void main(String[] args) {
+
+
+        List<? super Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+        integers.add(4);
+        integers.add(5);
+        integers.add(6);
+        integers.add(7);
+        integers.add(8);
+        integers.add(9);
+        integers.add(10);
+        System.out.println(integers);
+        List<? super Number> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.println(numbers);
+
+
 //        Students students = new Students();
 //        students.addStudent(new Student(1,"John","123456789"));
 //        students.addStudent(new Student(2,"David","987654321"));
