@@ -1,6 +1,11 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
+
+
+
+
+
 public class Main {
 //1 task
 //    public static Optional<String> findX(List<String> list){
@@ -34,6 +39,16 @@ public class Main {
 //        return integers.stream()
 //                .filter(n -> n % 2 != 0)
 //                .reduce((a, b) -> a * b);
+//    }
+
+
+    //6 task
+//    public static Set<String> FriendNames(List<Person> people) {
+//        return people.stream()
+//                .flatMap(person -> person.getFriends().stream())
+//                .map(Person::getName)
+//                .map(String::toUpperCase)
+//                .collect(Collectors.toSet());
 //    }
     public static void main(String[] args) {
 //1 task
@@ -97,6 +112,15 @@ public class Main {
 //        List<Integer> integers2 = Arrays.asList(2,4,6);
 //        System.out.println(calculate(integers1));
 //        System.out.println(calculate(integers2));
+
+
+        //6 task
+//        Person john = new Person("John", List.of(new Person("Alice", List.of()), new Person("David", List.of())));
+//        Person jane = new Person("Jane", List.of(new Person("Bob", List.of()), new Person("Charlie", List.of())));
+//        List<Person> people = List.of(john, jane);
+//
+//        Set<String> uniqueFriendNames = FriendNames(people);
+//        System.out.println(uniqueFriendNames);
 
         }
     }
