@@ -27,6 +27,14 @@ public class Main {
 //                .filter(name -> name != null && !name.isEmpty())
 //                .max(Comparator.comparingInt(String::length));
 //    }
+
+
+    //5 task
+//    public static Optional<Integer> calculate(List<Integer> integers){
+//        return integers.stream()
+//                .filter(n -> n % 2 != 0)
+//                .reduce((a, b) -> a * b);
+//    }
     public static void main(String[] args) {
 //1 task
 //        List<String> strings1 = Arrays.asList("Vlad", "Karl", "Xuan");
@@ -82,6 +90,13 @@ public class Main {
 //                        )
 //                ));
 //        System.out.println(highestSalary);
+
+
+        //5 task
+//        List<Integer> integers1 = Arrays.asList(1,2,3,4,5,6);
+//        List<Integer> integers2 = Arrays.asList(2,4,6);
+//        System.out.println(calculate(integers1));
+//        System.out.println(calculate(integers2));
 
         }
     }
