@@ -122,5 +122,22 @@ public class Main {
 //        Set<String> uniqueFriendNames = FriendNames(people);
 //        System.out.println(uniqueFriendNames);
 
-        }
+
+        //7 task
+//        List<Transaction> transactions = List.of(
+//                new Transaction(100, "Food"),
+//                new Transaction(50, "Transport"),
+//                new Transaction(200, "Food"),
+//                new Transaction(150, "Entertainment"),
+//                new Transaction(80, "Transport")
+//        );
+//
+//        Map<String, Double> categorySums = transactions.stream()
+//                .collect(Collectors.groupingBy(
+//                        Transaction::getCategory,
+//                        Collectors.summingDouble(Transaction::getAmount)
+//                ));
+//            System.out.println(categorySums);
+
+    }
     }
