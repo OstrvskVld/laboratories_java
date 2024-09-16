@@ -50,6 +50,30 @@ public class Main {
 //                .map(String::toUpperCase)
 //                .collect(Collectors.toSet());
 //    }
+
+
+    //8 task
+//    public static Optional<String> mostExpensive(List<Products> products) {
+//        return products.stream()
+//                .filter(Objects::nonNull)
+//                .sorted(Comparator.comparingDouble(Products::getPrice)
+//                        .reversed())
+//                .skip(1)
+//                .findFirst()
+//                .map(Products::getName);
+//    }
+
+
+    //9 task
+//    public static List<String> getUppercaseProduct(Map<Integer, Optional<String>> products) {
+//        return products.values().stream()
+//                .filter(Optional::isPresent)
+//                .map(Optional::get)
+//                .map(String::toUpperCase)
+//                .collect(Collectors.toList());
+//    }
+
+
     public static void main(String[] args) {
 //1 task
 //        List<String> strings1 = Arrays.asList("Vlad", "Karl", "Xuan");
@@ -139,5 +163,39 @@ public class Main {
 //                ));
 //            System.out.println(categorySums);
 
+
+
+        //8 task
+//        List<Products> products = Arrays.asList(new Products("Banana",35),
+//                new Products("Apple",23),new Products("Ananas",44));
+//        System.out.println(mostExpensive(products));
+
+
+
+        //9 task
+//        Map<Integer, Optional<String>> products = new HashMap<>();
+//        products.put(1, Optional.of("Apple"));
+//        products.put(2, Optional.empty());
+//        products.put(3, Optional.of("Banana"));
+//
+//        List<String> uppercaseNames = getUppercaseProduct(products);
+//        System.out.println(uppercaseNames);
+
+
+
+        //10 task
+//        Map<String, List<Integer>> cityTemperatures = new HashMap<>();
+//        cityTemperatures.put("Kiev", Arrays.asList(23, 25, 24, 26));
+//        cityTemperatures.put("Dnipro", Arrays.asList(22, 21, 23, 20));
+//        cityTemperatures.put("Lviv", Arrays.asList(18, 20, 19, 21));
+//
+//
+//        String HighTemp = cityTemperatures.entrySet().stream()
+//                .max(Comparator.comparingDouble(entry -> entry.getValue().stream()
+//                        .collect(Collectors.averagingInt(Integer::intValue))))
+//                .map(Map.Entry::getKey)
+//                .orElse(null);
+//
+//        System.out.println(HighTemp);
     }
     }
