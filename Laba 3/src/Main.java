@@ -3,15 +3,15 @@ import java.util.*;
 public class Main {
 
     //4 task
-//    public static class Find {
-//        public <T extends Comparable<T>> T findMax(T num1, T num2) {
-//            if (num1.compareTo(num2) > 0) {
-//                return num1;
-//            } else {
-//                return num2;
-//            }
-//        }
-//    }
+    public static class Find {
+        public <T extends Comparable<T>> T findMax(T num1, T num2) {
+            if (num1.compareTo(num2) > 0) {
+                return num1;
+            } else {
+                return num2;
+            }
+        }
+    }
 
 
     //6 task
@@ -123,14 +123,14 @@ public class Main {
 
 
 //8 task
-//        Dog dog = new Dog();
-//        Cat cat = new Cat();
-//        Labrador labrador = new Labrador();
-//        AnimalShelter animalShelter = new AnimalShelter();
-//        animalShelter.addAnimals(dog);
-//        animalShelter.addAnimals(cat);
-//        animalShelter.addAnimals(labrador);
-//        animalShelter.printAnimalSound();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Labrador labrador = new Labrador();
+        AnimalShelter animalShelter = new AnimalShelter();
+        animalShelter.addAnimals(dog);
+        animalShelter.addAnimals(cat);
+        animalShelter.addAnimals(labrador);
+        animalShelter.printAnimalSound();
     }
 }
 
