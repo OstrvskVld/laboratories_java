@@ -37,7 +37,7 @@ public class ClientsDAO {
         String config_properties = "D:\\laboratories_java\\Laba 5\\config.properties";
         try {
             Connection connection = ConnectionDB.getConnection(config_properties);
-            String query = "INSERT INTO order(distance,Drivers_driver_id, Clients_client_id) value(?,?,?)";
+            String query = "INSERT INTO \"taxi_service\".\"Orders\"(distance,Drivers_driver_id, Clients_client_id) value(?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
         try {
             preparedStatement.setDouble(1, order.getDistance());
@@ -114,7 +114,7 @@ public class ClientsDAO {
     }
 
     public void setOrderHistory() {
-        String configFilename = "C:\\Users\\Admin\\Desktop\\JAVA\\Laba5_1\\src\\main\\resources\\config.properties";
+        String configFilename = "D:\\laboratories_java\\Laba 5\\config.properties";
         try {
             Connection connection = ConnectionDB.getConnection(configFilename);
             Statement statement = connection.createStatement();
@@ -122,7 +122,7 @@ public class ClientsDAO {
             try (connection; statement; ResultSet resultSet = statement.executeQuery("SELECT * FROM `order`;")) {
                 while (resultSet.next()) {
                     if (resultSet.getInt("Clients_client_id") == this.getClient().getId()) {
-                        Drivers driver = Drivers.Driver_from_DB(resultSet.getInt("Driver_driver_id"));
+                        Drivers driver = Drivers.driverFromDB(resultSet.getInt("Driver_driver_id"));
                         Order order = new Order(resultSet.getInt(1), resultSet.getDouble(2), driver, this.getClient());
                         order.orderFromFile(String.valueOf(order.getId()));
                         this.addOrder(order);

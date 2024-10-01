@@ -37,4 +37,14 @@ public class Cars {
         this.cargo_capacity = cargo_capacity;
         this.drivers = drivers;
     }
+
+    public List<Order> getOrders() throws Exception {
+        List<Order> orders = new ArrayList<>();
+        orders = drivers.getOrders();
+        return orders;
+    }
+
+    public String getCar(){
+        return brand + " " + model;
+    }
 }

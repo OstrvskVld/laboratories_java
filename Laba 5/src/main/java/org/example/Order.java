@@ -11,14 +11,12 @@ public class Order {
     int id;
     double distance;
     Drivers drivers;
-    Cars cars;
     ClientsDTO clients;
 
-    public Order(int id, double distance, Drivers drivers, Cars cars, ClientsDTO clients){
+    public Order(int id, double distance, Drivers drivers, ClientsDTO clients){
         this.id = id;
         this.distance = distance;
         this.drivers = drivers;
-        this.cars = cars;
         this.clients = clients;
     }
 
@@ -56,7 +54,6 @@ public class Order {
                 "id=" + id +
                 ", distance=" + distance +
                 ", drivers=" + drivers +
-                ", cars=" + cars +
                 ", clients=" + clients +
                 '}';
     }

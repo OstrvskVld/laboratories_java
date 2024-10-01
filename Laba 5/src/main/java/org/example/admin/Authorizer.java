@@ -12,7 +12,7 @@ public class Authorizer {
         String config_properties = "D:\\laboratories_java\\Laba 5\\config.properties";
         try {
             Connection connection = ConnectionDB.getConnection(config_properties);
-            String query = "INSERT INTO client(first_name, last_name, middle_name, date_of_birth, number_of_phone,password)" +
+            String query = "INSERT INTO \"taxi_service\".\"Clients\"(first_name, last_name, middle_name, date_of_birth, number_of_phone,password)" +
                     "VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             try {

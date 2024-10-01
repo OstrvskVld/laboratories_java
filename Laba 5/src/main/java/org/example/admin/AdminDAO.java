@@ -23,7 +23,7 @@ public class AdminDAO {
         String config_properties = "D:\\laboratories_java\\Laba 5\\config.properties";
         try {
             Connection connection = ConnectionDB.getConnection(config_properties);
-            String query = "INSERT INTO driver(first_name, last_name, middle_name, date_of_birth, number_of_phone, driving_experience) VALUES (?, ?, ?, ?, ?,)";
+            String query = "INSERT INTO \"taxi_service\".\"Drivers\"(first_name, last_name, middle_name, date_of_birth, number_of_phone, driving_experience) VALUES (?, ?, ?, ?, ?,)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             try {
                 preparedStatement.setString(1,driver.getFirst_name());
@@ -57,7 +57,7 @@ public class AdminDAO {
         String config_properties = "D:\\laboratories_java\\Laba 5\\config.properties";
         try {
             Connection connection = ConnectionDB.getConnection(config_properties);
-            String query = "INSERT INTO car(brand,model,year_of_production,type_of_fuel,type_of_body,color,license_plate, capacity_of_passenger,cargo_capacity,Drivers drivers) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            String query = "INSERT INTO \"taxi_service\".\"Cars\"(brand,model,year_of_production,type_of_fuel,type_of_body,color,license_plate, capacity_of_passenger,cargo_capacity,Drivers drivers) VALUES (?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             try {
                 preparedStatement.setString(1,car.getBrand());

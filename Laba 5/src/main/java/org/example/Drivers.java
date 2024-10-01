@@ -13,12 +13,14 @@ import java.util.List;
 
 public class Drivers extends People{
     String driving_experience;
+    int nubmer_of_phone;
     public Drivers(int id){
         super(id);
     }
     public Drivers(int id, String first_name, String last_name, String middle_name, String date_of_birth, String driving_experience, int number_of_phone){
         super(id, first_name, last_name, middle_name, date_of_birth, number_of_phone);
         this.driving_experience = driving_experience;
+        this.nubmer_of_phone = number_of_phone;
     }
 
     static public Drivers driverFromDB(int id) throws Exception {
@@ -64,7 +66,7 @@ public class Drivers extends People{
                     resultSet.getInt(3);
                     resultSet.getInt(4);
                     ClientsDTO client = ClientsDTO.Client_from_DB(resultSet.getInt(4));
-                    Order order = new Order(resultSet.getInt(1), resultSet.getDouble(2), this, null, client);
+                    Order order = new Order(resultSet.getInt(1), resultSet.getDouble(2), this, client);
                     orders.add(order);
                 }
             }
