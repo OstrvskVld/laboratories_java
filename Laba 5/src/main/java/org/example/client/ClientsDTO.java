@@ -11,13 +11,13 @@ import java.sql.Statement;
 
 @Getter
 public class ClientsDTO extends People {
-    String password;
+    int password;
 
     public ClientsDTO(int id) {
         super(id);
     }
 
-    public ClientsDTO(int id, String first_name, String last_name, String middle_name, String date_of_birth, int number_of_phone, String password) {
+    public ClientsDTO(int id, String first_name, String last_name, String middle_name, String date_of_birth, int number_of_phone, int password) {
         super(id, first_name, last_name, middle_name, date_of_birth, number_of_phone);
         this.password = password;
     }
@@ -42,7 +42,7 @@ public class ClientsDTO extends People {
                             resultSet.getString(4),
                             resultSet.getString(5),
                             resultSet.getInt(6),
-                            resultSet.getString(7)
+                            resultSet.getInt(7)
                     );
                 }
             }
