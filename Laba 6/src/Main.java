@@ -9,21 +9,21 @@ public class Main {
         Client client1 = new Client("Client 1", account1, semaphore);
         Client client2 = new Client("Client 2", account2, semaphore);
 
-        // 1. Creating threads
+
         Thread thread1 = new Thread(client1, "Client 1 Thread");
         Thread thread2 = new Thread(client2, "Client 2 Thread");
 
-        // 4. Setting thread properties (priority, name)
+
         thread1.setPriority(Thread.MAX_PRIORITY);
         thread2.setPriority(Thread.MIN_PRIORITY);
 
-        // 2. Starting threads
+
         thread1.start();
         thread2.start();
 
-        // 3. Using Thread.sleep() to simulate delays
+
         Thread.sleep(5000);
-        thread1.interrupt(); // 2. Forced stopping of threads
+        thread1.interrupt();
         thread2.interrupt();
 
         thread1.join();
@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Final balance of Client 1: " + account1.getBalance());
         System.out.println("Final balance of Client 2: " + account2.getBalance());
 
-        // Simulate transferring funds between accounts
+
         Thread transferThread = new Thread(() -> {
             try {
                 if (!account1.transfer(account2, 500)) {

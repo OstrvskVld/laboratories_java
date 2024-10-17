@@ -3,9 +3,9 @@ import java.util.concurrent.locks.*;
 
 public class Account {
     private double balance;
-    private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock(); // 12. ReentrantReadWriteLock
-    private final Lock transferLock = new ReentrantLock(); // 9. ReentrantLock
-    private final Condition sufficientFunds = transferLock.newCondition(); // 15. Condition variables
+    private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+    private final Lock transferLock = new ReentrantLock();
+    private final Condition sufficientFunds = transferLock.newCondition();
 
     public Account(double balance) {
         this.balance = balance;
@@ -36,16 +36,16 @@ public class Account {
     }
 
     public boolean transfer(Account target, double amount) throws InterruptedException {
-        if (transferLock.tryLock(1, TimeUnit.SECONDS)) { // 10. LockInterruptibly and 11. tryLock
+        if (transferLock.tryLock(1, TimeUnit.SECONDS)) {
             try {
                 while (balance < amount) {
                     System.out.println(Thread.currentThread().getName() + " waiting for sufficient funds to transfer.");
-                    sufficientFunds.await(); // 16. wait(), notify(), notifyAll()
+                    sufficientFunds.await();
                 }
                 withdraw(amount);
                 target.deposit(amount);
                 System.out.println(Thread.currentThread().getName() + " transferred " + amount + " to another account.");
-                sufficientFunds.signalAll(); // Notify other threads
+                sufficientFunds.signalAll();
                 return true;
             } finally {
                 transferLock.unlock();
